@@ -79,9 +79,9 @@
 	visible_message("<span class='notice'>[src] puts [P_THEIR(gender)] hand on \the [target]'s shoulder, assisting [P_THEM(target.gender)].</span>", "<span class='notice'>You put your hand on \the [target]'s shoulder, assisting [P_THEM(target.gender)]. You need to stand still while doing this.</span>")
 	LAZYDISTINCTADD(target.helpers_skillsets,mind.skills.active)
 	while(do_mob(src, target, HELP_OTHER_TIME))
-		if(prob(30))
+		if(prob(40 / length(target.helpers_skillsets)))
 			target.emote(pick(list("hmm", "hmm!", "hmm?")))
-		else if(prob(15))
+		else if(prob(25 / length(target.helpers_skillsets)))
 			emote(pick(list("hmm", "hmm!", "hmm?")))
 		continue
 	LAZYREMOVE(target.helpers_skillsets, mind.skills.active)
