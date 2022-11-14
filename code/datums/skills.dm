@@ -80,9 +80,9 @@
 	LAZYDISTINCTADD(target.helpers_skillsets,mind.skills.active)
 	while(do_mob(src, target, HELP_OTHER_TIME))
 		if(prob(40 / length(target.helpers_skillsets)))
-			target.emote(pick(list("hmm", "hmm!", "hmm?")))
+			target.emote("hmm")
 		else if(prob(25 / length(target.helpers_skillsets)))
-			emote(pick(list("hmm", "hmm!", "hmm?")))
+			emote("hmm")
 		continue
 	LAZYREMOVE(target.helpers_skillsets, mind.skills.active)
 	visible_message("<span class='notice'>[src] removes [P_THEIR(gender)] hand from \the [target]'s shoulder.</span>", "<span class='notice'>You remove your hand from \the [target]'s shoulder.</span>")
