@@ -335,6 +335,7 @@
 		EMOTE_STATE(is_intentional_or_species_no_flag, NO_EMOTION),
 	)
 
+
 /datum/emote/human/hmm_think
 	key = "hmm"
 
@@ -358,6 +359,7 @@
 /datum/emote/human/hmm_think/get_sound(mob/living/carbon/human/user, intentional)
 	return pick(user.gender == FEMALE ? SOUNDIN_HMM_THINK_FEMALE : SOUNDIN_HMM_THINK_MALE)
 
+
 /datum/emote/human/hmm_question
 	key = "hmm?"
 
@@ -378,11 +380,11 @@
 		EMOTE_STATE(is_stat, CONSCIOUS)
 	)
 
-/datum/emote/human/hmm_think/hmm_question/get_sound(mob/living/carbon/human/user, intentional)
+/datum/emote/human/hmm_question/get_sound(mob/living/carbon/human/user, intentional)
 	return pick(user.gender == FEMALE ? SOUNDIN_HMM_QUESTION_FEMALE : SOUNDIN_HMM_QUESTION_MALE)
 
 
-/datum/emote/human/hmm_think/hmm_excited
+/datum/emote/human/hmm_excited
 	key = "hmm!"
 
 	message_1p = "You mumble excitedly!"
@@ -402,5 +404,5 @@
 		EMOTE_STATE(is_stat, CONSCIOUS)
 	)
 
-/datum/emote/human/hmm_think/hmm_exclaim/get_sound(mob/living/carbon/human/user, intentional)
+/datum/emote/human/hmm_excited/get_sound(mob/living/carbon/human/user, intentional)
 	return pick(user.gender == FEMALE ? SOUNDIN_HMM_EXCLAIM_FEMALE : SOUNDIN_HMM_EXCLAIM_MALE)
