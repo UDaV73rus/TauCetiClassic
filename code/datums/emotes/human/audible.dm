@@ -12,6 +12,8 @@
 
 	message_type = SHOWMSG_AUDIO
 
+	age_variations = TRUE
+
 	state_checks = list(
 		EMOTE_STATE(is_stat, CONSCIOUS)
 	)
@@ -32,12 +34,6 @@
 		return pick(SOUNDIN_LAUGH_FEMALE)
 
 	return pick(SOUNDIN_LAUGH_MALE)
-
-/datum/emote/human/laugh/play_sound(mob/living/carbon/human/user, intentional, emote_sound)
-	var/voice_frequency = TRANSLATE_RANGE(user.age, user.species.min_age, user.species.max_age, 0.85, 1.05)
-	var/sound_frequency = 1.05 - (voice_frequency - 0.85)
-
-	playsound(user, emote_sound, VOL_EFFECTS_MASTER, null, FALSE, sound_frequency)
 
 
 /datum/emote/human/giggle
@@ -353,6 +349,8 @@
 
 	message_type = SHOWMSG_AUDIO
 
+	age_variations = TRUE
+
 	state_checks = list(
 		EMOTE_STATE(is_stat, CONSCIOUS)
 	)
@@ -360,13 +358,7 @@
 /datum/emote/human/hmm_think/get_sound(mob/living/carbon/human/user, intentional)
 	return pick(user.gender == FEMALE ? SOUNDIN_HMM_THINK_FEMALE : SOUNDIN_HMM_THINK_MALE)
 
-/datum/emote/human/hmm_think/play_sound(mob/living/carbon/human/user, intentional, emote_sound)
-	var/voice_frequency = TRANSLATE_RANGE(user.age, user.species.min_age, user.species.max_age, 0.85, 1.05)
-	var/sound_frequency = 1.05 - (voice_frequency - 0.85)
-
-	playsound(user, emote_sound, VOL_EFFECTS_MASTER, null, FALSE, sound_frequency)
-
-/datum/emote/human/hmm_think/hmm_question
+/datum/emote/human/hmm_question
 	key = "hmm?"
 
 	message_1p = "You mumble and curle your eyebrows questioningly..?"
@@ -378,8 +370,17 @@
 	message_miming = "curls their eyebrows questioningly..?"
 	message_muzzled = "mumbles silently and questioningly..?"
 
+	message_type = SHOWMSG_AUDIO
+
+	age_variations = TRUE
+
+	state_checks = list(
+		EMOTE_STATE(is_stat, CONSCIOUS)
+	)
+
 /datum/emote/human/hmm_think/hmm_question/get_sound(mob/living/carbon/human/user, intentional)
 	return pick(user.gender == FEMALE ? SOUNDIN_HMM_QUESTION_FEMALE : SOUNDIN_HMM_QUESTION_MALE)
+
 
 /datum/emote/human/hmm_think/hmm_excited
 	key = "hmm!"
@@ -392,6 +393,14 @@
 
 	message_miming = "curls their eyebrows excitedly!"
 	message_muzzled = "mumbles silently and excitedly!"
+
+	message_type = SHOWMSG_AUDIO
+
+	age_variations = TRUE
+
+	state_checks = list(
+		EMOTE_STATE(is_stat, CONSCIOUS)
+	)
 
 /datum/emote/human/hmm_think/hmm_exclaim/get_sound(mob/living/carbon/human/user, intentional)
 	return pick(user.gender == FEMALE ? SOUNDIN_HMM_EXCLAIM_FEMALE : SOUNDIN_HMM_EXCLAIM_MALE)
