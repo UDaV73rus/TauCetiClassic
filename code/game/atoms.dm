@@ -207,13 +207,9 @@
 	if (ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.getBrainLoss() >= 60)
-			if(prob(80))
-				user.emote("hmm?")
 			user.visible_message("<span class='warning'>[H] stares cluelessly at [isturf(loc) ? src : ismob(loc) ? src : "something"] and drools.</span>")
 			return FALSE
 		else if(prob(H.getBrainLoss()))
-			if(prob(80))
-				user.emote("hmm?")
 			to_chat(user, "<span class='warning'>You momentarily forget how to use [src].</span>")
 			return FALSE
 	return TRUE
