@@ -80,6 +80,8 @@
 	LAZYDISTINCTADD(target.helpers_skillsets,mind.skills.active)
 	while(do_mob(src, target, HELP_OTHER_TIME))
 		if(prob(30))
+			target.emote(pick(list("hmm", "hmm!", "hmm?")))
+		else if(prob(15))
 			emote(pick(list("hmm", "hmm!", "hmm?")))
 		continue
 	LAZYREMOVE(target.helpers_skillsets, mind.skills.active)
