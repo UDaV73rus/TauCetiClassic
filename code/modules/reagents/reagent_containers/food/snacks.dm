@@ -528,6 +528,16 @@
 	food_type = NATURAL_FOOD
 	food_moodlet = /datum/mood_event/natural_food
 
+/obj/item/weapon/reagent_containers/food/snacks/tentacle
+	name = "tentacle"
+	desc = "A cutted tentacle"
+	icon_state = "tentacle"
+	filling_color = "#ffdefe"
+	bitesize = 6
+	list_reagents = list("protein" = 3)
+	food_type = NATURAL_FOOD
+	food_moodlet = /datum/mood_event/natural_food
+
 /obj/item/weapon/reagent_containers/food/snacks/fishfingers
 	name = "Fish Fingers"
 	desc = "A finger of fish."

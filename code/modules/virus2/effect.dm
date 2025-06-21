@@ -177,7 +177,7 @@
 		UnregisterSignal(H, COMSIG_MOB_DIED)
 		return
 
-	if(!(H.species.name in list(HUMAN, UNATHI, TAJARAN, SKRELL)))
+	if(!(H.species.name in list(HUMAN, UNATHI, TAJARAN, SKRELL, TWINTOPUS)))
 		return
 
 	if(infected_organ == null && holder.ticks == 0)

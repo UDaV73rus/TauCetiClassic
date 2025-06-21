@@ -290,6 +290,10 @@
 #define COMSIG_MOB_HUD_CREATED "mob_hud_created"
 ///from base of item/equipped(): (obj/item/I, slot)
 #define COMSIG_MOB_EQUIPPED "mob_equipped"
+// from base of /mob/living/carbon/human/verb/quick_equip(): ()
+#define COMSIG_HUMAN_EQUIP_EMPTY_HAND "human_equip_empty_hand"
+// from base of /datum/keybinding/human/holster/down(): ()
+#define COMSIG_HUMAN_HOTKEY_HOLSTER "human_hotkey_holster"
 ///from base of obj/allowed(mob/M): (/obj) returns ACCESS_ALLOWED if mob has id access to the obj
 #define COMSIG_MOB_TRIED_ACCESS "tried_access"
 	#define COMSIG_ACCESS_ALLOWED 1

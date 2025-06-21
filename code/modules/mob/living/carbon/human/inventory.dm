@@ -7,6 +7,7 @@
 		var/obj/item/I = H.get_active_hand()
 		var/obj/item/weapon/storage/S = H.get_inactive_hand()
 		if(!I)
+			SEND_SIGNAL(H, COMSIG_HUMAN_EQUIP_EMPTY_HAND)
 			to_chat(H, "<span class='notice'>You are not holding anything to equip.</span>")
 			return
 

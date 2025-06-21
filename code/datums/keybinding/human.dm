@@ -25,6 +25,7 @@
 /datum/keybinding/human/holster/down(client/user)
 	var/mob/living/carbon/human/H = user.mob
 	H.holster_weapon()
+	SEND_SIGNAL(H, COMSIG_HUMAN_HOTKEY_HOLSTER)
 
 /datum/keybinding/human/emote_panel
 	hotkey_keys = list("J")

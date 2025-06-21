@@ -119,6 +119,9 @@
 	h_style = "blue IPC screen"
 	. = ..(mapload, IPC)
 
+/mob/living/carbon/human/twintopus/atom_init(mapload)
+	. = ..(mapload, TWINTOPUS)
+
 /mob/living/carbon/human/abductor/atom_init(mapload)
 	. = ..(mapload, ABDUCTOR)
 
@@ -2334,7 +2337,7 @@
 	if(species.flags[IS_SYNTHETIC])
 		SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "wet_clothes", /datum/mood_event/dangerous_clothes, -wet_clothes * 2)
 		return
-	if(get_species() in list(SKRELL, DIONA, PODMAN))
+	if(get_species() in list(SKRELL, DIONA, PODMAN, TWINTOPUS))
 		SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "wet_clothes", /datum/mood_event/refreshing_clothes, wet_clothes)
 		return
 	SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "wet_clothes", /datum/mood_event/wet_clothes, -wet_clothes)

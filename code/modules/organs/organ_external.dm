@@ -80,6 +80,7 @@
 		if(owner.bodyparts_by_name[body_zone] == src)
 			owner.bodyparts_by_name -= body_zone
 		owner.bad_bodyparts -= src
+		owner.update_body()
 	QDEL_LIST(bodypart_organs)
 	if(pumped)
 		owner.metabolism_factor.RemoveModifier("Pumped_[name]")
@@ -134,6 +135,8 @@
 
 	if(surgically)
 		check_rejection()
+	
+	H.update_body()
 
 /obj/item/organ/external/proc/recolor()
 	if(!owner)

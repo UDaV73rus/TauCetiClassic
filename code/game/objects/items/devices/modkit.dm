@@ -73,3 +73,7 @@
 /obj/item/device/modkit/vox
 	name = "Vox hardsuit modification kit"
 	target_species = VOX
+
+/obj/item/device/modkit/twintopus
+	name = "Twintopus hardsuit modification kit"
+	target_species = TWINTOPUS

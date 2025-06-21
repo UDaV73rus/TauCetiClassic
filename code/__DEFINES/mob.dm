@@ -83,6 +83,7 @@
 #define DIONA          	 "Diona"
 #define PODMAN         	 "Podman"
 #define IPC            	 "Machine"
+#define TWINTOPUS        "Twintopus"
 #define VOX            	 "Vox"
 #define VOX_ARMALIS    	 "Vox Armalis"
 #define ABDUCTOR       	 "Abductor"
