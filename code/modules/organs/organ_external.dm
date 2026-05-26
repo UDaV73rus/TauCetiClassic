@@ -195,6 +195,8 @@
 
 	if(surgically)
 		check_rejection()
+	
+	SEND_SIGNAL(src, COMSIG_ORGAN_EXTERNAL_POST_INSERT_ORGAN)
 
 /obj/item/organ/external/proc/mod_skin_color(original_color)
 	// sorted in priority, maybe some day someone will experiment with colors mixing
@@ -522,6 +524,8 @@ Note that amputating the affected organ does in fact remove the infection from t
 /obj/item/organ/external/proc/droplimb(no_explode = FALSE, clean = FALSE, disintegrate = DROPLIMB_EDGE)
 	if(cannot_amputate || !owner)
 		return
+	
+	SEND_SIGNAL(src, COMSIG_ORGAN_EXTERNAL_PRE_DROPLIMB)
 
 	// todo: need to write better logic for dismembering and embedded_objects
 	for(var/obj/item/weapon/implant/implanted_object in embedded_objects)

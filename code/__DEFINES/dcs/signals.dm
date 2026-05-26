@@ -85,6 +85,9 @@
 #define COMSIG_SPECIES_LOSS "species_loss"
 
 // /client signals
+/// from base of client/Move(): (atom/NewLoc, direction), after conscious checks, but before checks of canmove
+#define COMSIG_CLIENTMOB_PREMOVE_CONSCIOUS "client_premove_conscious"
+	#define COMPONENT_CLIENTMOB_BLOCK_PREMOVE_CONSCIOUS 1
 /// from base of client/Move(): (atom/NewLoc, direction)
 #define COMSIG_CLIENTMOB_MOVE "client_move"
 	#define COMPONENT_CLIENTMOB_BLOCK_MOVE 1
@@ -448,3 +451,15 @@
 	#define COMPONENT_CLIENT_MOUSEUP_INTERCEPT (1<<0)
 //from base of client/MouseUp(): (/client, object, location, control, params)
 #define COMSIG_CLIENT_MOUSEDRAG "client_mousedrag"
+
+// External organs, limbs
+/// from base of /obj/item/organ/external/proc/droplimb
+#define COMSIG_ORGAN_EXTERNAL_PRE_DROPLIMB "organ_external_pre_droplimb"
+/// from base of /obj/item/organ/external/proc/insert_organ
+#define COMSIG_ORGAN_EXTERNAL_POST_INSERT_ORGAN "organ_external_post_insert_organ"
+
+// Hotkeys
+/// from base of /mob/living/carbon/human/verb/quick_equip(): ()
+#define COMSIG_HUMAN_HOTKEY_QUICK_EQUIP "human_hotkey_quick_equip"
+/// from base of /datum/keybinding/human/holster/down(): ()
+#define COMSIG_HUMAN_HOTKEY_HOLSTER "human_hotkey_holster"

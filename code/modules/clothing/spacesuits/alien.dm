@@ -448,3 +448,23 @@
 	..()
 	if (magpulse)
 		to_chat(user, "It would be hard to take these off without relaxing your grip first.")//theoretically this message should only be seen by the wearer when the claws are equipped.
+
+/obj/item/clothing/head/helmet/space/tentari
+	name = "gorgonian shroud helmet"
+	desc = "Шлем похожий на хитрую раковину моллюска, в котором матовая жемчужина, чья переливающаяся поверхность завораживает вас. Внушает благоговейный трепет, то как предки тентари решили использовать жемчужину в охоте на левиафанов — ибо лишь смотря сквозь неё в пасть левиафану, возможно получить шанс остаться не замеченным его взору."
+	icon_state = "gargonian_shroud_helmet"
+	item_state = "gargonian_shroud_helmet"
+	armor = list(melee = 80, bullet = 50, laser = 50, energy = 10, bomb = 35, bio = 30, rad = 30)
+	heat_protection = HEAD
+	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
+
+/obj/item/clothing/suit/space/tentari
+	name = "gorgonian shroud suit"
+	desc = "Сперва вам кажется, что это исполинское спагетти. Приглядевшись, вы узнаете скафандр, больше похожий на причудливо спутанный коралл, чем на то что могли бы сконструировать инженеры. Надевая такой костюм, тентари становятся миражом в глазах их подводных левиафанов."
+	icon_state = "gargonian_shroud_suit"
+	item_state = "gargonian_shroud_suit"
+	armor = list(melee = 80, bullet = 50, laser = 50, energy = 10, bomb = 35, bio = 30, rad = 30)
+	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/weapon/storage/bag/ore,/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/rcd)
+	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
+	

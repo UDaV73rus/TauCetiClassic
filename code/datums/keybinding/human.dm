@@ -13,6 +13,7 @@
 
 /datum/keybinding/human/quick_equip/down(client/user)
 	var/mob/living/carbon/human/H = user.mob
+	SEND_SIGNAL(H, COMSIG_HUMAN_HOTKEY_QUICK_EQUIP)
 	H.quick_equip()
 	return TRUE
 
@@ -24,6 +25,7 @@
 
 /datum/keybinding/human/holster/down(client/user)
 	var/mob/living/carbon/human/H = user.mob
+	SEND_SIGNAL(H, COMSIG_HUMAN_HOTKEY_HOLSTER)
 	H.holster_weapon()
 
 /datum/keybinding/human/emote_panel

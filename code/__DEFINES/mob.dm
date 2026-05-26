@@ -96,6 +96,8 @@
 #define ABOMINATION      "Disgusting abomination"
 #define SERPENTID        "Serpentid"
 #define MOTH             "Moth"
+#define TENTARI          "Tentari"
+#define GRABBER          "Grabber"
 
 
 #define MONKEY         	 "Monkey"

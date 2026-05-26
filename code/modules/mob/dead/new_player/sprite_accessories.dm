@@ -778,7 +778,7 @@
 	name = "Shaved"
 	icon_state = "bald"
 	gender = NEUTER
-	species_allowed = list(HUMAN, UNATHI, TAJARAN, SKRELL, VOX, IPC, DIONA, PODMAN, PLUVIAN)
+	species_allowed = list(HUMAN, UNATHI, TAJARAN, SKRELL, VOX, IPC, DIONA, PODMAN, PLUVIAN, TENTARI)
 
 /datum/sprite_accessory/facial_hair/fiveoclock
 	name = "Five o'Clock Shadow"

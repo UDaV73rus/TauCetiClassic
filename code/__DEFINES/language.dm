@@ -13,6 +13,7 @@
 #define LANGUAGE_VOXPIDGIN "Vox-pidgin"
 #define LANGUAGE_ROOTSPEAK "Rootspeak"
 #define LANGUAGE_ROOTSONG "Rootsong"
+#define LANGUAGE_TENTARIAN "Tentarian"
 #define LANGUAGE_SOLCOMMON "Sol Common"
 #define LANGUAGE_TRINARY "Trinary"
 #define LANGUAGE_TRADEBAND "Tradeband"

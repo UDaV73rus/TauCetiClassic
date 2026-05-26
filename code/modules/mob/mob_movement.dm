@@ -97,6 +97,9 @@
 			return
 	Process_Grab()
 
+	if(SEND_SIGNAL(mob, COMSIG_CLIENTMOB_PREMOVE_CONSCIOUS, n, direct) & COMPONENT_CLIENTMOB_BLOCK_MOVE)
+		return
+
 	if(!forced && !mob.canmove)
 		return
 

@@ -17,6 +17,7 @@ var/global/list/FABRICATOR		  = list('sound/machines/fabricator1.ogg', 'sound/ma
 // Simple footsteps
 var/global/list/SOUNDIN_CLOWNSTEP     = list('sound/effects/clownstep1.ogg', 'sound/effects/clownstep2.ogg')
 var/global/list/SOUNDIN_FOOTSTEPS     = list('sound/effects/tile1.wav', 'sound/effects/tile2.wav', 'sound/effects/tile3.wav', 'sound/effects/tile4.wav')
+var/global/list/SOUNDIN_TENTACLESTEP  = list('sound/effects/mob/footstep/tentacle1.ogg', 'sound/effects/mob/footstep/tentacle2.ogg', 'sound/effects/mob/footstep/tentacle3.ogg')
 var/global/list/SOUNDIN_WATER         = list('sound/effects/mob/footstep/water1.ogg', 'sound/effects/mob/footstep/water2.ogg', 'sound/effects/mob/footstep/water3.ogg', 'sound/effects/mob/footstep/water4.ogg')
 var/global/list/SOUNDIN_WATER_SHALLOW = list('sound/effects/mob/footstep/waterstep1.ogg', 'sound/effects/mob/footstep/waterstep2.ogg', 'sound/effects/mob/footstep/waterstep3.ogg')
 var/global/list/SOUNDIN_WATER_DEEP    = list('sound/effects/mob/footstep/swimming1.ogg', 'sound/effects/mob/footstep/swimming2.ogg', 'sound/effects/mob/footstep/swimming3.ogg')
