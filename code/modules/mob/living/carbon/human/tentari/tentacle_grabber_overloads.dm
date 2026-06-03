@@ -19,3 +19,12 @@
 
 /mob/living/carbon/human/tentacle_grabber/get_assignment(if_no_id = "No id", if_no_job = "No job")
     return BP.owner.get_assignment(if_no_id, if_no_job)
+
+/mob/living/carbon/human/tentacle_grabber/get_authentification_name(if_no_id = "Unknown")
+    return BP.owner.get_authentification_name(if_no_id)
+
+// del everywhere use of /mob/living/carbon/human/proc/get_idcard()
+
+/mob/living/carbon/human/tentacle_grabber/electrocute_act(shock_damage, obj/source, siemens_coeff = 1.0, def_zone = null, tesla_shock = 0)
+    . = ..()
+    BP.owner.electrocute_act(shock_damage, source, siemens_coeff, def_zone, tesla_shock)

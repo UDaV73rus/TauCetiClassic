@@ -33,6 +33,7 @@
 	RegisterSignal(src, COMSIG_CLIENTMOB_MOVE, PROC_REF(client_move))
 	RegisterSignal(owner, COMSIG_MOB_SET_A_INTENT, PROC_REF(owner_action_intent_changed))
 	RegisterSignal(owner, COMSIG_MOB_SET_M_INTENT, PROC_REF(owner_move_intent_changed))
+	// подписаться на /mob/living/carbon/human/Stun Weaken Paralyse jittery
 	bp_controller.RegisterSignal(src, COMSIG_HUMAN_HOTKEY_QUICK_EQUIP, TYPE_PROC_REF(/datum/bodypart_controller/tentacle, toggle_retrieving_grabber))
 	bp_controller.RegisterSignal(src, COMSIG_HUMAN_HOTKEY_HOLSTER, TYPE_PROC_REF(/datum/bodypart_controller/tentacle, toggle_drag_owner))
 
